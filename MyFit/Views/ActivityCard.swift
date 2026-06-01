@@ -46,10 +46,17 @@ struct ActivityCard: View {
                     .foregroundColor(isAuth ? .green : .orange)
             }
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .cornerRadius(20)
-        .padding(4)
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(.ultraThinMaterial)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .strokeBorder(.black.opacity(0.12), lineWidth: 1)
+        )
+        .shadow(color: .black.opacity(0.06), radius: 12, x: 0, y: 6)
+        .padding(.horizontal, 10)
     }
 }
 

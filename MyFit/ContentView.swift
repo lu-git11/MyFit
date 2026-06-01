@@ -22,11 +22,21 @@ struct ContentView: View {
                                     viewModel.activityStatus, authStatus:
                                     viewModel.authStatus, isAuth:
                                     viewModel.isAuth)
+                    ActivityCard(activityStatus:
+                                    viewModel.activityStatus, authStatus:
+                                    viewModel.authStatus, isAuth:
+                                    viewModel.isAuth)
                 }
-                .padding(2)
-                .background(Color.orange)
-                .ignoresSafeArea()
+                .padding(.horizontal, 10)
+                .padding(.vertical, 8)
             }
+            .background(
+                LinearGradient(colors: [
+                    Color(.blue),
+                    Color(.secondarySystemGroupedBackground)
+                ], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+                )
             .navigationTitle("Health Tracker")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{
@@ -38,10 +48,9 @@ struct ContentView: View {
             }
         }
     }
-        
-    
 }
 
 #Preview {
     ContentView()
 }
+

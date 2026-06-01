@@ -12,7 +12,7 @@ struct HeaderSection: View{
         VStack(spacing: 10){
             Image(systemName: "figure.walk")
                 .font(.system(size:90))
-                .foregroundColor(.blue)
+                .foregroundColor(.orange)
             
             Text("Daily Activity Tracker")
                 .font(.title)
